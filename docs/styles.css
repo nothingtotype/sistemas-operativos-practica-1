@@ -4,12 +4,15 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 header {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 10px;
 }
 
 main {
@@ -25,14 +28,10 @@ button {
     font-size: 16px;
 }
 
-button:hover {
-    background-color: #005f7a;
-}
-
 footer {
     background-color: #333;
     color: white;
-    padding: 10px;
+    /* padding: 10px; */
     position: absolute;
     bottom: 0;
     width: 100%;
