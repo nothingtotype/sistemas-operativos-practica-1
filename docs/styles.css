@@ -144,16 +144,56 @@ button:hover {
 }
 
 
-/* Styles for Bar 2 GIF */
-.bar-2 {
+/* Styles for Bar 2 */
+/* .bar-2 {
     background: #33aaff;
     flex: 2;
     display: flex;
     align-items: center;
     justify-content: center;
+} */
+
+.bar-2 {
+    background: #33aaff;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+
+#job-stack {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Oldest job ID at the bottom */
+    width: 100%;
+    padding: 10px;
+    /* background: lightgray; */
+}
+
+.job-item {
+    background: white;
+    padding: 5px;
+    margin: 2px;
+    border: 1px solid black;
+    width: 50%;
+    text-align: center;
+    color: black;
+}
+
+#gif-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 #gears-gif {
+    /* align-items: center; */
     width: 150px;
     height: auto;
     display: none; /* Initially hidden */
