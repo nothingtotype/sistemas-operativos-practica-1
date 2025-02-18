@@ -8,9 +8,17 @@ document.getElementById("calc-form").addEventListener("submit", function(event) 
     let num2 = document.getElementById("num2").value;
     let operand = document.getElementById("operand").value;
 
-    // Create stack item
-
+    // Check if stack container exists; if not, create it
     let stackContainer = document.getElementById("stack");
+    if (!stackContainer) {
+        stackContainer = document.createElement("div");
+        stackContainer.id = "stack";
+        // Insert the stack after the form-container and before the start-button-container
+        let formContainer = document.querySelector(".form-container");
+        let startButtonContainer = document.querySelector(".start-button-container");
+        formContainer.insertAdjacentElement('afterend', stackContainer); // Insert after form-container
+    }
+
 
     let stackItem = document.createElement("div");
     stackItem.className = "stack-item";
