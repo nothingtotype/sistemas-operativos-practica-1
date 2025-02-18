@@ -45,7 +45,6 @@ main {
     height: 90vh;
 } 
 
-
 .bar {
     display: flex;
     align-items: center;
@@ -53,20 +52,19 @@ main {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
+    padding: 20px;
 }
 
-/* bar that contains the form */
 .bar-1 {
     background: #ff5733;
     flex: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 10px;
-    align-items: flex-start;
+    flex-direction: column; /* Flex column to divide into boxes */
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* form container styling */
+/* Form Styling */
 .form-container {
     display: flex;
     flex-direction: column;
@@ -74,6 +72,7 @@ main {
     background: rgba(255, 255, 255, 0.2);
     padding: 15px;
     border-radius: 8px;
+    width: 250px;
 }
 
 form {
@@ -99,22 +98,15 @@ button:hover {
     background: #555;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    /* padding: 10px; */
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
 /* Stack Styling */
 .stack-container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    max-height: 180px;
-    overflow-y: auto;
+    flex-direction: column-reverse; /* Newest input appears at the top */
+    align-items: center;
+    /* max-height: 180px; */
+    /* overflow-y: auto; */
+    /* margin-top: 15px; */
+    width: 250px;
 }
 
 .stack-item {
@@ -124,8 +116,33 @@ footer {
     margin: 5px;
     border-radius: 5px;
     font-size: 1rem;
-    text-align: right;
+    text-align: center;
+    width: 100%;
 }
+
+/* Start Button Styling */
+.start-button-container {
+    margin-top: 20px;
+}
+
+#start-button {
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start-button:hover {
+    background-color: #666;
+}
+
+.hidden-stack {
+    display: none;
+}
+
 
 /* Styles for Bar 2 GIF */
 .bar-2 {

@@ -1,3 +1,5 @@
+let stackCounter = 0;
+let emptyStack = null;
 document.getElementById("calc-form").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form refresh
 
@@ -7,17 +9,23 @@ document.getElementById("calc-form").addEventListener("submit", function(event) 
     let operand = document.getElementById("operand").value;
 
     // Create stack item
+
     let stackContainer = document.getElementById("stack");
+
     let stackItem = document.createElement("div");
     stackItem.className = "stack-item";
     stackItem.textContent = `${num1} ${operand} ${num2}`;
 
     // Insert at the top of the stack
     stackContainer.prepend(stackItem);
+    stackCounter +=1;
 
     // Ensure max 6 items in the stack
-    if (stackContainer.children.length > 6) {
-        stackContainer.removeChild(stackContainer.lastChild);
+    if (stackContainer.children.length > 4) {
+        emptyStack = stackContainer;
+        // document.getElementById("stack").remove();
+
+        stackContainer.parentNode.removeChild(stackContainer);
     }
 
     // Clear form inputs
