@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,14 +15,24 @@ body {
     height: 100vh;
 }
 
+header, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Takes 1/6th of the screen */
+    text-align: center;
+}
+
 header {
     background-color: #333;
     color: white;
-    padding: 10px;
 }
 
 main {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 4; /* Takes 4/6th of the screen */
 }
 
 button {
@@ -35,4 +51,84 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* bar that contains the form */
+.bar-1 {
+    background: #ff5733;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* form container styling */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 8px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* Stack Styling */
+.stack-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.stack-item {
+    background: white;
+    color: black;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: right;
+}
+
+.bar-2 {
+    background: #33aaff;
+    flex: 2;
+}
+
+.bar-3 {
+    background: #33cc33;
+    flex: 1;
 }
