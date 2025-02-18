@@ -10,38 +10,19 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
 }
 
+
 header, footer {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex: 1; /* Takes 1/6th of the screen */
+    flex: 0.5; /* Takes 1/6th of the screen */
     text-align: center;
 }
 
 header {
     background-color: #333;
     color: white;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    flex: 4; /* Takes 4/6th of the screen */
-}
-
-button {
-    background-color: #008cba;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
 }
 
 footer {
@@ -52,6 +33,18 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+main {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+} 
+
 
 .bar {
     display: flex;
@@ -67,7 +60,9 @@ footer {
     background: #ff5733;
     flex: 1;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
     align-items: flex-start;
 }
 
@@ -104,6 +99,15 @@ button:hover {
     background: #555;
 }
 
+footer {
+    background-color: #333;
+    color: white;
+    /* padding: 10px; */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 /* Stack Styling */
 .stack-container {
     display: flex;
@@ -123,9 +127,19 @@ button:hover {
     text-align: right;
 }
 
+/* Styles for Bar 2 GIF */
 .bar-2 {
     background: #33aaff;
     flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gears-gif {
+    width: 150px;
+    height: auto;
+    display: none; /* Initially hidden */
 }
 
 .bar-3 {

@@ -1,5 +1,5 @@
 document.getElementById("calc-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form from refreshing the page
+    event.preventDefault(); // Prevent form refresh
 
     // Get values
     let num1 = document.getElementById("num1").value;
@@ -12,12 +12,24 @@ document.getElementById("calc-form").addEventListener("submit", function(event) 
     stackItem.className = "stack-item";
     stackItem.textContent = `${num1} ${operand} ${num2}`;
 
-    // Append to stack (limit to 6 entries)
-    if (stackContainer.children.length >= 6) {
-        stackContainer.removeChild(stackContainer.firstChild); // Remove oldest entry
+    // Insert at the top of the stack
+    stackContainer.prepend(stackItem);
+
+    // Ensure max 6 items in the stack
+    if (stackContainer.children.length > 6) {
+        stackContainer.removeChild(stackContainer.lastChild);
     }
-    stackContainer.appendChild(stackItem);
 
     // Clear form inputs
     document.getElementById("calc-form").reset();
+});
+
+// Show the GIF for 10 seconds, then hide it
+document.addEventListener("DOMContentLoaded", function() {
+    let gif = document.getElementById("gears-gif");
+    gif.style.display = "block"; // Show GIF
+
+    setTimeout(function() {
+        gif.style.display = "none"; // Hide GIF after 10 seconds
+    }, 10000);
 });
