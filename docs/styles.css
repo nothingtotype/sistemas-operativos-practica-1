@@ -202,4 +202,23 @@ button:hover {
 .bar-3 {
     background: #33cc33;
     flex: 1;
+    flex-direction: column;
+}
+
+#job-in-process {
+    flex: 2;
+}
+
+#job-result {
+    flex: 2;
+    flex-direction: column;
+    align-items: top;
+}
+
+#execute-job-button {
+    /* flex: 1; */
+    /* flex-direction: row; */
+    /* align-items: bottom; */
+    width: 150px;
+    height: 50px;
 }

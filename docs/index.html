@@ -17,13 +17,16 @@
             <div class="form-container">
                 <h3>Input Values</h3>
                 <form id="calc-form">
+                    <input type="text" id="name" placeholder="Enter name" required>
                     <input type="number" id="num1" placeholder="Enter first number" required>
-                    <select id="operand">
-                        <option value="+">+</option>
-                        <option value="-">-</option>
-                        <option value="*">*</option>
-                        <option value="/">/</option>
-                    </select>
+                        <select id="operand">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="/">/</option>
+                            <option value="residuo">residuo</option>
+                            <option value="potencia">potencia</option>
+                        </select>
                     <input type="number" id="num2" placeholder="Enter second number" required>
                     <button type="submit">Save</button>
                 </form>
@@ -44,10 +47,12 @@
             </div>
         </div>
 
-        <!-- <div class="bar bar-2">
-            <img id="gears-gif" src="..\images\gears.gif" alt="Gears Animation">
-        </div> -->
-        <div class="bar bar-3">Third Bar (1/4)</div>
+        <div class="bar bar-3">
+            <div id="job-in-process" class="job-in-process-box"></div>
+            <div id="job-result" class="job-result-box"></div>
+            <button id="execute-job-button">Ejecutar Job</button>
+        </div>
+
     </main>
 
     <footer>
